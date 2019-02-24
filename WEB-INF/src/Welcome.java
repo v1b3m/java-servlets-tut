@@ -3,7 +3,7 @@ import javax.servlet.*;
 import java.io.*;
 
 public class Welcome extends HttpServlet {
-    public void doPost(HttpServletRequest request, HttpServletResponse response) {
+    public void doGet(HttpServletRequest request, HttpServletResponse response) {
 
         // Send the request back to the user
         try {
@@ -12,12 +12,10 @@ public class Welcome extends HttpServlet {
 
             // add a cookie object that stores the username
             Cookie ck[] = request.getCookies();
-
-            //add cookie to the response
-            response.addCookie(ck);
             
             writer.println("<html><body>");
-            writer.println("<h1>Hello "+ ck[0].getValue() + ", it's working!!</h1>" );
+            // writer.println("<h1>Hello "+ ck[0].getValue() + ", it's working!!</h1>" );
+            writer.println("<h1>Hello "+ ", it's working!!</h1>" );
             writer.println("</body></html>");
 
             // close the stream

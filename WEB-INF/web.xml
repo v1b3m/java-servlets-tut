@@ -8,4 +8,14 @@
         <servlet-name>MyLoginServlet</servlet-name>
         <url-pattern>/login</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>MyWelcomeServlet</servlet-name>
+        <servlet-class>Welcome</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>MyWelcomeServlet</servlet-name>
+        <url-pattern>/welcome</url-pattern>
+    </servlet-mapping>
 </web-app>
