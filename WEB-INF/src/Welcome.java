@@ -31,16 +31,13 @@ public class Welcome extends HttpServlet {
             writer.println(docType + 
                 "<html>\n" +
                     "<head><title>" + title + "</title>" +
-                    "+</head>\n" +
+                    "</head>\n" +
 
                     "<body bgcolor = \"#f0f0f0\">\n" +
                         "<h1 align = \"center\">" + title + "</h1>\n" +
-                        "<ul>\n" +
-                            "  <li><b>First Name</b>: "
-                            + request.getParameter("firstname") + "\n" +
-                            "  <li><b>Last Name</b>: "
-                            + request.getParameter("lastname") + "\n" +
-                        "</ul>\n" +
+                        "<form action='read' method='post'>\n" +
+                            "<input type='submit' value='Go'>" +
+                        "</form>" +
                     "</body>" +
                 "</html>"
             );
